@@ -12,15 +12,16 @@ public class SortShell {
                 int temp = numeros[i];
                 int j =i;
                 while (j >= gap) {
+                    comparacion++;
                     if (numeros[j - gap] > temp) {
-                        comparacion++;
                         numeros[j] = numeros[j - gap];
+                        cambios++;
                         j -= gap;
-                        cambios++;                    
+                                           
                     }else{
-                        comparacion++;
                         break;
                     }   
+                    
                     
                 }  
                 numeros[j] = temp;
@@ -28,8 +29,8 @@ public class SortShell {
             }
 
         }
-        int total = comparacion + cambios;
-        System.out.println("\n(Numero de comparaciones y cambio): " + total);
+        int total= comparacion + cambios;
+        System.out.println("\n ( Comparacion + cambios =) " + total);
 
     }
     
